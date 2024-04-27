@@ -3,6 +3,10 @@ package nl.zolotko.everything4s
 enum Bit {
   case `0`, `1`
 
+  def toggle: Bit = this match
+    case `0` => `1`
+    case `1` => `0`
+
   def toBoolean: Boolean = this match
     case `0` => false
     case `1` => true
